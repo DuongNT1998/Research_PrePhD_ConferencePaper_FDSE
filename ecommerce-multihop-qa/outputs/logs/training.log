@@ -1,0 +1,141 @@
+2026-06-03 20:51:52,800 INFO training — Starting training — stage=imitation device=cpu seed=42
+2026-06-03 20:51:52,838 INFO training — Building system components...
+2026-06-03 20:51:52,838 INFO src.kg.neo4j_connector — KGConnector: connected to Neo4j at bolt://localhost:7687
+2026-06-03 20:51:53,299 INFO src.retrieval.query_encoder — Loading sentence-transformer: all-MiniLM-L6-v2
+2026-06-03 20:51:54,217 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:51:54,232 WARNING huggingface_hub.utils._http — Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-06-03 20:51:54,249 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-06-03 20:51:54,518 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:51:54,533 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-03 20:51:54,538 INFO sentence_transformers.base.model — Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-03 20:51:54,805 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:51:54,817 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-03 20:51:55,083 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:51:55,103 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+2026-06-03 20:51:55,371 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:51:55,382 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-06-03 20:51:55,659 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:51:55,670 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-06-03 20:51:55,937 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-06-03 20:51:56,206 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:51:56,216 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-06-03 20:51:58,665 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-06-03 20:51:58,928 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-03 20:51:59,205 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-03 20:51:59,470 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-03 20:51:59,844 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:51:59,857 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:00,130 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:00,148 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:00,430 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:00,440 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:00,714 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:00,726 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:01,135 INFO httpx — HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-06-03 20:52:01,405 INFO httpx — HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-06-03 20:52:02,479 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:02,493 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:02,774 INFO httpx — HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-06-03 20:52:03,679 INFO src.retrieval.query_encoder — QueryEncoder ready — base_dim=384 projected_dim=256
+2026-06-03 20:52:03,679 INFO src.retrieval.node_encoder — NodeEncoder: loading sentence-transformer all-MiniLM-L6-v2
+2026-06-03 20:52:03,948 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:03,963 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:04,238 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:04,247 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:04,250 INFO sentence_transformers.base.model — Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-03 20:52:04,510 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:04,519 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:04,803 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:04,813 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+2026-06-03 20:52:05,072 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:05,086 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:05,358 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:05,370 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:05,662 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-06-03 20:52:05,938 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:05,947 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:06,280 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-06-03 20:52:06,545 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-03 20:52:06,821 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-03 20:52:07,088 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-06-03 20:52:07,364 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:07,378 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:07,652 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:07,667 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:07,937 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:07,948 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:08,215 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:08,227 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:08,512 INFO httpx — HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-06-03 20:52:08,788 INFO httpx — HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-06-03 20:52:09,141 INFO httpx — HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-03 20:52:09,159 INFO httpx — HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-06-03 20:52:09,431 INFO httpx — HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-06-03 20:52:09,595 INFO src.retrieval.node_encoder — NodeEncoder ready — node_feature_dim=128 edge_type_dim=16
+2026-06-03 20:52:09,598 INFO src.retrieval.semantic_scorer — SemanticScorer: cosine mode
+2026-06-03 20:52:09,598 INFO src.llm.llm_judge — LLMJudge initialised (model=claude-sonnet-4-20250514).
+2026-06-03 20:52:09,599 INFO src.rl.reward — RewardFunction initialised (llm_judge=True)
+2026-06-03 20:52:09,599 INFO src.rl.policy_network — PolicyNetwork: state_dim=560 action_dim=144 hidden=512 heads=4
+2026-06-03 20:52:10,548 INFO src.rl.policy_network — PolicyNetwork parameters: 2732034
+2026-06-03 20:52:10,550 INFO src.rl.actor — Actor initialised.
+2026-06-03 20:52:10,550 INFO src.rl.critic — Critic (GAE utility) initialised.
+2026-06-03 20:52:10,550 INFO src.rl.kg_env — KGEnvironment initialised.
+2026-06-03 20:52:10,550 INFO src.retrieval.adaptive_retriever — AdaptiveRetriever initialised.
+2026-06-03 20:52:10,550 INFO src.llm.llm_judge — LLMSynthesiser initialised.
+2026-06-03 20:52:10,551 INFO src.reasoning.agent — ReasoningAgent initialised.
+2026-06-03 20:52:10,551 INFO src.rl.checkpoint — CheckpointManager at E:\x\ecommerce-multihop-qa\outputs\checkpoints
+2026-06-03 20:52:10,606 INFO training — System ready. Products in KG: 5000
+2026-06-03 20:52:10,675 INFO src.data.qa_dataset — Loaded 2700 QA samples from data\processed\qa_train.jsonl (skipped=0). Distribution: {'multi_hop': 1087, 'simple': 802, 'negative': 546, 'constraint': 265}
+2026-06-03 20:52:10,675 INFO training — Training on 2700 QA samples from data/processed/qa_train.jsonl
+2026-06-03 20:52:10,676 INFO training — ============================================================
+2026-06-03 20:52:10,676 INFO training — STAGE 1: Imitation Learning
+2026-06-03 20:52:10,676 INFO training — ============================================================
+2026-06-03 20:52:10,681 INFO training — Preflight: Product nodes in KG = 5000
+2026-06-03 20:52:10,965 INFO training — Preflight: gold-answer membership in KG = 50/50 (100%)
+2026-06-03 20:52:10,966 INFO training — Generating 300 teacher trajectories for imitation learning (dataset of 2700 queries)...
+2026-06-03 20:52:52,218 INFO training —   Teacher 20/300 | ok=20 reached_gold=12 buffer=88
+2026-06-03 20:53:12,454 INFO training —   Teacher 40/300 | ok=40 reached_gold=32 buffer=172
+2026-06-03 20:53:29,345 INFO training —   Teacher 60/300 | ok=60 reached_gold=44 buffer=260
+2026-06-03 20:53:45,397 INFO training —   Teacher 80/300 | ok=80 reached_gold=54 buffer=350
+2026-06-03 20:54:01,863 INFO training —   Teacher 100/300 | ok=100 reached_gold=66 buffer=442
+2026-06-03 20:54:12,551 INFO training —   Teacher 120/300 | ok=120 reached_gold=80 buffer=528
+2026-06-03 20:54:28,441 INFO training —   Teacher 140/300 | ok=140 reached_gold=96 buffer=618
+2026-06-03 20:54:35,843 INFO training —   Teacher 160/300 | ok=160 reached_gold=118 buffer=696
+2026-06-03 20:54:47,542 INFO training —   Teacher 180/300 | ok=180 reached_gold=142 buffer=776
+2026-06-03 20:54:59,819 INFO training —   Teacher 200/300 | ok=200 reached_gold=158 buffer=864
+2026-06-03 20:55:13,946 INFO training —   Teacher 220/300 | ok=220 reached_gold=174 buffer=954
+2026-06-03 20:55:22,280 INFO training —   Teacher 240/300 | ok=240 reached_gold=188 buffer=1040
+2026-06-03 20:55:35,784 INFO training —   Teacher 260/300 | ok=260 reached_gold=204 buffer=1128
+2026-06-03 20:55:45,392 INFO training —   Teacher 280/300 | ok=280 reached_gold=220 buffer=1214
+2026-06-03 20:55:59,014 INFO training —   Teacher 300/300 | ok=300 reached_gold=228 buffer=1306
+2026-06-03 20:55:59,015 INFO training — Teacher trajectories generated: 1306 transitions, 300/300 episodes ok, 228 gold products reached.
+2026-06-03 20:55:59,039 INFO src.retrieval.query_encoder — QueryEncoder projection MLP unfrozen for training.
+2026-06-03 20:55:59,096 INFO src.rl.ppo_trainer — ImitationTrainer initialised.
+2026-06-03 20:56:07,170 INFO src.rl.ppo_trainer — Imitation epoch 1/20 — loss=3.5371
+2026-06-03 20:56:07,552 INFO src.rl.checkpoint — Checkpoint saved: imitation (step=0)
+2026-06-03 20:56:09,363 INFO src.rl.ppo_trainer — Imitation epoch 2/20 — loss=3.3835
+2026-06-03 20:56:10,602 INFO src.rl.ppo_trainer — Imitation epoch 3/20 — loss=3.1615
+2026-06-03 20:56:11,791 INFO src.rl.ppo_trainer — Imitation epoch 4/20 — loss=2.4008
+2026-06-03 20:56:13,576 INFO src.rl.ppo_trainer — Imitation epoch 5/20 — loss=2.7992
+2026-06-03 20:56:15,659 INFO src.rl.ppo_trainer — Imitation epoch 6/20 — loss=2.5116
+2026-06-03 20:56:15,920 INFO src.rl.checkpoint — Checkpoint saved: imitation (step=5)
+2026-06-03 20:56:17,578 INFO src.rl.ppo_trainer — Imitation epoch 7/20 — loss=2.4407
+2026-06-03 20:56:18,782 INFO src.rl.ppo_trainer — Imitation epoch 8/20 — loss=2.8868
+2026-06-03 20:56:19,940 INFO src.rl.ppo_trainer — Imitation epoch 9/20 — loss=2.8455
+2026-06-03 20:56:20,971 INFO src.rl.ppo_trainer — Imitation epoch 10/20 — loss=2.4508
+2026-06-03 20:56:21,926 INFO src.rl.ppo_trainer — Imitation epoch 11/20 — loss=2.6196
+2026-06-03 20:56:21,984 INFO src.rl.checkpoint — Checkpoint saved: imitation (step=10)
+2026-06-03 20:56:22,990 INFO src.rl.ppo_trainer — Imitation epoch 12/20 — loss=2.5471
+2026-06-03 20:56:23,975 INFO src.rl.ppo_trainer — Imitation epoch 13/20 — loss=2.9785
+2026-06-03 20:56:25,623 INFO src.rl.ppo_trainer — Imitation epoch 14/20 — loss=2.3059
+2026-06-03 20:56:26,998 INFO src.rl.ppo_trainer — Imitation epoch 15/20 — loss=2.1161
+2026-06-03 20:56:28,284 INFO src.rl.ppo_trainer — Imitation epoch 16/20 — loss=2.3320
+2026-06-03 20:56:28,623 INFO src.rl.checkpoint — Checkpoint saved: imitation (step=15)
+2026-06-03 20:56:29,744 INFO src.rl.ppo_trainer — Imitation epoch 17/20 — loss=2.8915
+2026-06-03 20:56:31,012 INFO src.rl.ppo_trainer — Imitation epoch 18/20 — loss=2.5024
+2026-06-03 20:56:32,351 INFO src.rl.ppo_trainer — Imitation epoch 19/20 — loss=1.9435
+2026-06-03 20:56:33,282 INFO src.rl.ppo_trainer — Imitation epoch 20/20 — loss=2.5114
+2026-06-03 20:56:33,314 INFO src.rl.checkpoint — Checkpoint saved: imitation_final (step=0)
+2026-06-03 20:56:33,316 INFO training — Stage 1 complete. Final IL loss=2.5114
+2026-06-03 20:56:33,356 INFO src.kg.neo4j_connector — KGConnector: driver closed.
+2026-06-03 20:56:33,356 INFO training — Training complete. Connector closed.

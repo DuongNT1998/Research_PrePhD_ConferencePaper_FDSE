@@ -1,0 +1,5 @@
+data/
+neo4j_setup/import/
+outputs/
+.git/
+__pycache__/

@@ -1,4 +1,4 @@
-# Atlas — Demo Web App (RL Multi-hop Retrieval)
+# Demo Web App (RL Multi-hop Retrieval)
 
 ChatGPT-style demo over the existing RL `ReasoningAgent`.
 **FastAPI + MongoDB + React (Vite).** Chat storage uses MongoDB only (never Neo4j).

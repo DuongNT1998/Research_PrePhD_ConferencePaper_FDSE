@@ -1,0 +1,10 @@
+# Bỏ qua toàn bộ các file dữ liệu nặng trong thư mục data
+data/raw/*
+data/interim/*
+data/processed/*
+data/samples/*
+
+# Bỏ qua tất cả các file định dạng dữ liệu (phòng hờ)
+*.jsonl
+*.json
+*.csv
